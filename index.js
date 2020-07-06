@@ -60,15 +60,11 @@
     , whichButton = function(event){
     if (event.which == null){
       whichButton = function(event){
-        button = (event.button < 2) ? "LEFT" :
-          ((event.button == 4) ? "MIDDLE" : "RIGHT");
-        return button;
+        return (event.button < 2) ? "LEFT" : ((event.button == 4) ? "MIDDLE" : "RIGHT");
       }
     }else{
       whichButton = function(event){
-        button = (event.which < 2) ? "LEFT" :
-          ((event.which == 2) ? "MIDDLE" : "RIGHT");
-        return button;
+        return (event.which < 2) ? "LEFT" : ((event.which == 2) ? "MIDDLE" : "RIGHT");
       }
     }
     return whichButton(event);
